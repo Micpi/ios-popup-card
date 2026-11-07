@@ -1,31 +1,34 @@
-# iOS Popup Card — Home Assistant
+<div align="center">
 
-[![Home Assistant](https://img.shields.io/badge/Home%20Assistant-Lovelace-41BDF5?style=for-the-badge&logo=home-assistant&logoColor=white)](https://www.home-assistant.io/)
-[![HACS](https://img.shields.io/badge/HACS-Custom%20Card-41BDF5?style=for-the-badge)](https://hacs.xyz)
-[![Version](https://img.shields.io/badge/Version-v3.0.0-0EA5E9?style=for-the-badge)](https://github.com/Micpi/iOS-PopUp-card)
-[![Type](https://img.shields.io/badge/Type-Popup%20Card-0284C7?style=for-the-badge)](https://github.com/Micpi/iOS-PopUp-card)
+# 📱 iOS Popup Card — Home Assistant Card
+
+[![hacs_badge](https://img.shields.io/badge/HACS-Custom-orange.svg?style=for-the-badge)](https://hacs.xyz)
+[![HA Version](https://img.shields.io/badge/Home%20Assistant-2024.1%2B-blue?style=for-the-badge&logo=home-assistant)](https://www.home-assistant.io)
+[![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
+[![Version](https://img.shields.io/github/v/release/Micpi/iOS-PopUp-card?style=for-the-badge&label=Version)](https://github.com/Micpi/iOS-PopUp-card/releases/latest)
 [![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-Support-FFDD00?style=for-the-badge&logo=buymeacoffee&logoColor=000000)](https://buymeacoffee.com/mickaelpila)
 
-Un composant Lovelace qui affiche un popup (bottom-sheet) inspiré d'iOS : animations fluides,
-gestes natifs et boutons d'accès rapide. Ce document décrit l'installation, la configuration
-et donne des exemples prêts à l'emploi.
+**Composant Lovelace de popup type bottom-sheet inspiré de l'expérience iOS.**  
+Déclenchez des vues contextuelles élégantes avec animations fluides, gestes natifs et actions rapides.
+
+</div>
 
 ---
 
-## Table des matières
+## 📖 Sommaire
 
-- [Installation](#installation)
-- [Principes](#principes)
-- [Configuration rapide](#configuration-rapide)
-- [Options détaillées](#options-détaillées)
-- [Sous-boutons & actions](#sous-boutons--actions)
-- [Exemples](#exemples)
-- [Dépannage](#dépannage)
-- [Changelog & crédits](#changelog--crédits)
+- Installation
+- Principes
+- Configuration rapide
+- Options detaillees
+- Sous-boutons & actions
+- Exemples
+- Depannage
+- Changelog & credits
 
 ---
 
-## Installation
+## 📦 Installation
 
 1. Copiez `ios-popup-card.js` dans `/config/www/community/ios-popup-card/`.
 
@@ -42,7 +45,7 @@ lovelace:
 
 ---
 
-## Principes
+## 🧠 Principes
 
 - **Activation** : le popup s'ouvre via navigation (`navigate` vers `#popup` ou `#popup-<hash>`).
 - **Contenu** : vous pouvez insérer n'importe quelle carte Lovelace dans le popup.
@@ -51,7 +54,7 @@ lovelace:
 
 ---
 
-## Configuration rapide
+## ⚙️ Configuration rapide
 
 Configuration minimale :
 
@@ -75,7 +78,7 @@ tap_action:
 
 ---
 
-## Options détaillées
+## 🧭 Options détaillées
 
 Extraits des options principales :
 
@@ -92,7 +95,7 @@ Remarque : des valeurs vides ne remplacent pas les styles par défaut — la car
 
 ---
 
-## Sous-boutons & actions
+## 🎯 Sous-boutons & actions
 
 Jusqu'à 2 sous-boutons peuvent être affichés dans l'en-tête. Chaque bouton accepte :
 
@@ -123,7 +126,7 @@ Conseil : testez vos `entity_id` et services séparément avant de les intégrer
 
 ---
 
-## Exemples
+## 🧪 Exemples
 
 ### 1) Contrôle des lumières
 
@@ -226,7 +229,7 @@ cards:
 
 ---
 
-## Dépannage
+## 🩺 Depannage
 
 - Popup invisible : vérifiez le hash (`#popup`), la ressource JS et videz le cache.
 - Boutons inactifs : vérifiez `entity_id`, permissions et logs Home Assistant.
@@ -236,7 +239,7 @@ Pour les erreurs JS, ouvrez la console (F12) et copiez les messages.
 
 ---
 
-## Changelog & crédits
+## 📋 Changelog & credits
 
 - **v2.1** — Intégration `ui_action`, meilleures détections de gestes, fallback pour anciennes configs.
 
@@ -252,7 +255,7 @@ Si vous souhaitez, je peux :
 
 ---
 
-## FAQ (questions fréquentes)
+## ❓ FAQ (questions fréquentes)
 
 Q: Comment ouvrir le popup depuis un bouton ?
 
@@ -275,7 +278,7 @@ R: Oui, mais évitez d'en mettre trop (risque d'UX et de performance). Préfére
 
 ---
 
-## Snippets YAML pratiques
+## 🧩 Snippets YAML pratiques
 
 1) Ouvrir le popup depuis une carte bouton (existant) :
 
@@ -322,7 +325,7 @@ sub_btn_2:
 
 ---
 
-## Changelog détaillé
+## 📋 Changelog detaille
 
 - **v2.1** (Mars 2026)
   - Migration des actions vers le sélecteur natif `ui_action`.
