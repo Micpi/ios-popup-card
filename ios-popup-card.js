@@ -1,5 +1,5 @@
 /**
- * iOS Popup Card v3.0.2 — Custom Lovelace Card
+ * iOS Popup Card v3.0.3 — Custom Lovelace Card
  * Popup style iOS bottom-sheet déclenché par hash navigation (#popup-xxx)
  * Carte invisible — s'active automatiquement quand le hash correspond
  * Éditeur visuel HA-natif inspiré de Bubble Card (ha-form, ha-expansion-panel)
@@ -1026,7 +1026,7 @@ class IOSPopupCardEditor extends HTMLElement {
             </div>
           </div>
 
-          <div class="version">iOS Popup Card v3.0.2</div>
+          <div class="version">iOS Popup Card v3.0.3</div>
         </div>
 
         <!-- ═══ TAB: CARTES ═══ -->
@@ -3039,7 +3039,7 @@ window.customCards.push({
 })
 
 console.info(
-  "%c iOS-POPUP-CARD %c v3.0.2 ",
+  "%c iOS-POPUP-CARD %c v3.0.3 ",
   "background:#0A84FF;color:white;font-weight:bold;border-radius:4px 0 0 4px;padding:2px 6px",
   "background:#1c1c1e;color:#0A84FF;font-weight:bold;border-radius:0 4px 4px 0;padding:2px 6px"
 )

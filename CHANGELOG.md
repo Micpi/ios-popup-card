@@ -40,8 +40,6 @@
 - HACS should detect this release from tag `v3.0.3`.
 - If the update does not appear immediately, refresh HACS cache or wait for the next HACS refresh cycle.
 
-# Changelog
-
 ## v3.0.2 - 2026-11-07
 
 - changed: remplacement complet du script `ios-popup-card.js` (éditeur visuel natif HA, picker natif, prévisualisation et interactions popup iOS)
