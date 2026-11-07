@@ -1,5 +1,10 @@
 # Changelog
 
+## v3.0.4 - 2026-11-07
+
+- Fixed popup sub-cards not inheriting Home Assistant context by mounting the overlay in the Lovelace tree.
+- Aligned all card version labels and HACS metadata to 3.0.4.
+
 ## v3.0.3 - 2026-11-07
 
 - Date: 2026-11-07
@@ -50,14 +55,6 @@
 - feat(card): publish ios-popup-card v3.0.1
 - changed: .gitignore
 - changed: README.md
-- changed: hacs.json
-- changed: ios-popup-card.js
-- changed: package-lock.json
-- changed: package.json
-
-## v3.0.4 - 2026-11-07
-
-- feat(card): publish package v3.0.4
 - changed: hacs.json
 - changed: ios-popup-card.js
 - changed: package-lock.json

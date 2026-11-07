@@ -1,7 +1,7 @@
 {
   "name": "iOS Popup",
   "content_in_root": false,
-  "filename": "package.json",
+  "filename": "ios-popup-card.js",
   "render_readme": true,
   "version": "3.0.4",
   "homeassistant": "2024.1.0"
