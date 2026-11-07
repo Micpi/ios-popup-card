@@ -55,3 +55,12 @@
 - changed: package-lock.json
 - changed: package.json
 
+## v3.0.4 - 2026-11-07
+
+- feat(card): publish package v3.0.4
+- changed: hacs.json
+- changed: ios-popup-card.js
+- changed: package-lock.json
+- changed: package.json
+
+

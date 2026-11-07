@@ -1,5 +1,5 @@
 /**
- * iOS Popup Card v3.0.3 — Custom Lovelace Card
+ * iOS Popup Card v3.0.4 — Custom Lovelace Card
  * Popup style iOS bottom-sheet déclenché par hash navigation (#popup-xxx)
  * Carte invisible — s'active automatiquement quand le hash correspond
  * Éditeur visuel HA-natif inspiré de Bubble Card (ha-form, ha-expansion-panel)
@@ -1026,7 +1026,7 @@ class IOSPopupCardEditor extends HTMLElement {
             </div>
           </div>
 
-          <div class="version">iOS Popup Card v3.0.3</div>
+          <div class="version">iOS Popup Card v3.0.0</div>
         </div>
 
         <!-- ═══ TAB: CARTES ═══ -->
@@ -2817,7 +2817,19 @@ class IOSPopupCard extends HTMLElement {
       </div>
     `
 
-    document.body.appendChild(overlay)
+    // Monter l'overlay dans l'arbre Lovelace (hui-root) et non dans <body> :
+    // les cartes HA récentes (thermostat, tile...) récupèrent hass par contexte Lit,
+    // indisponible hors de l'arbre Lovelace.
+    let _mountPoint = document.body
+    try {
+      const _ha = document.querySelector("home-assistant")
+      const _main = _ha && _ha.shadowRoot && _ha.shadowRoot.querySelector("home-assistant-main")
+      const _panel =
+        _main && _main.shadowRoot && _main.shadowRoot.querySelector("ha-panel-lovelace")
+      const _root = _panel && _panel.shadowRoot && _panel.shadowRoot.querySelector("hui-root")
+      if (_root && _root.shadowRoot) _mountPoint = _root.shadowRoot
+    } catch (_) {}
+    _mountPoint.appendChild(overlay)
 
     // Désactiver le scroll du body pour empêcher le scroll en arrière-plan
     this._originalBodyOverflow = document.body.style.overflow
@@ -3039,7 +3051,7 @@ window.customCards.push({
 })
 
 console.info(
-  "%c iOS-POPUP-CARD %c v3.0.3 ",
+  "%c iOS-POPUP-CARD %c v3.0.0 ",
   "background:#0A84FF;color:white;font-weight:bold;border-radius:4px 0 0 4px;padding:2px 6px",
   "background:#1c1c1e;color:#0A84FF;font-weight:bold;border-radius:0 4px 4px 0;padding:2px 6px"
 )
